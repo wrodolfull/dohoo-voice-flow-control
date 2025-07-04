@@ -169,7 +169,7 @@ const Plans = () => {
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">Minutos utilizados</span>
               <span className="text-sm text-gray-600">
-                {currentPlan.aiMinutes:toLocaleString()} / {currentPlan.maxAiMinutes:toLocaleString()}
+                {currentPlan.aiMinutes.toLocaleString()} / {currentPlan.maxAiMinutes.toLocaleString()}
               </span>
             </div>
             <Progress value={aiUsage} className="h-2" />
@@ -275,7 +275,7 @@ const Plans = () => {
                     <span className="text-3xl font-bold text-dohoo-primary">R$ {plan.price}</span>
                     <span className="text-gray-600">/mês</span>
                   </div>
-                  <p className="text-lg font-medium">{plan.minutes:toLocaleString()} minutos</p>
+                  <p className="text-lg font-medium">{plan.minutes.toLocaleString()} minutos</p>
                   <ul className="space-y-2 text-sm">
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
@@ -314,7 +314,7 @@ const Plans = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {additionalMinutes.map((pack, index) => (
               <div key={index} className="border rounded-lg p-4 text-center space-y-3">
-                <h4 className="font-semibold text-lg">{pack.minutes:toLocaleString()} minutos</h4>
+                <h4 className="font-semibold text-lg">{pack.minutes.toLocaleString()} minutos</h4>
                 <p className="text-2xl font-bold text-dohoo-primary">R$ {pack.price}</p>
                 <p className="text-sm text-gray-600">Uso único • Não expira</p>
                 <Button

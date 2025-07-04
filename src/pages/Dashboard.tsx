@@ -136,13 +136,13 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">Minutos utilizados</span>
               <span className="text-sm text-gray-600">
-                {usedMinutes:toLocaleString()} / {totalMinutes:toLocaleString()}
+                {usedMinutes.toLocaleString()} / {totalMinutes.toLocaleString()}
               </span>
             </div>
             <Progress value={aiUsage} className="h-3" />
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600">
-                Restam {remainingMinutes:toLocaleString()} minutos
+                Restam {remainingMinutes.toLocaleString()} minutos
               </span>
               <Badge 
                 variant={aiUsage >= 90 ? "destructive" : aiUsage >= 75 ? "default" : "secondary"}
